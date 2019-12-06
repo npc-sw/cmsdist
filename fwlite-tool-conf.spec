@@ -50,14 +50,12 @@ Requires: OpenBLAS-toolfile
 Requires: py2-pybind11-toolfile
 Requires: fwlite_python_tools
 
-%if %isamd64
-%if %isslc
+%is_cmsos slc7_aarch64
 Requires: glibc-toolfile
-%endif
 %endif
 
 # Only for Darwin platform.
-%if %isdarwin
+%ifarch darwin
 Requires: freetype-toolfile
 %endif
 
